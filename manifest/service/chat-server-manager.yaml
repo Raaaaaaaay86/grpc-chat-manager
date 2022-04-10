@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: chat-server-manager-svc
+spec:
+  selector:
+    app: chat-server-manager
+  ports:
+    - name: chat-server-manager
+      port: 9090
+      targetPort: 9090

@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: chat-server-manager
+spec:
+  selector:
+    matchLabels:
+      app: chat-server-manager
+  template:
+    metadata:
+      labels:
+        app: chat-server-manager
+    spec:
+      containers:
+        - name: chat-server-manager
+          image: raaaaaaaay86/grpc-chat-manager
+          ports: # Just Informative
+            - name: spring-boot
+              containerPort: 9090
